@@ -67,6 +67,15 @@
                                     <action selector="receiveMessage:" destination="sUp-NY-jwW" eventType="touchUpInside" id="3pE-hg-dSk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMm-xG-3OB">
+                                <rect key="frame" x="74" y="493" width="230" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create another room with Simone"/>
+                                <connections>
+                                    <action selector="createRoom:" destination="sUp-NY-jwW" eventType="touchUpInside" id="OUq-fn-hjD"/>
+                                    <action selector="receiveMessage:" destination="sUp-NY-jwW" eventType="touchUpInside" id="bUn-xC-YlL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZHy-GZ-N3X"/>

@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     
     var userId: String?
     
+    var roomId: String?
+    
     @IBOutlet weak var welcomeLabel: UILabel!
     
     override func viewDidLoad() {
@@ -47,6 +49,7 @@ class HomeViewController: UIViewController {
             switch response.result {
             case .success(let message):
                 print("Sent! Message: \(message)")
+                self.roomId = message.roomId!
             // ...
             case .failure(let error):
                 print("Error: \(error)")
@@ -56,17 +59,51 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func receiveMessage(_ sender: Any) {
+    
+
         
-        sparkSDK!.messages.list(roomId: "Y2lzY29zcGFyazovL3VzL1JPT00vMDkyMjMyY2UtODZiOC0zMTg5LTgyNjEtOTYxMjQ0MThmYTll", completionHandler: {
-            response in
+//        sparkSDK!.people.list(email: EmailAddress.fromString("simon_pen@hotmail.it")!, displayName: nil, max: nil, queue: DispatchQueue.main, completionHandler: { response in
+//            
+//            for person in response.result.data!{
+//                print(person.id)
+//            }
+//            
+//        })
+//
+        if let _ = roomId {
             
-            for message in response.result.data!{
-                print("\(message.personEmail!.toString()): \(message.text!)")
-            }
+            sparkSDK!.messages.list(roomId: roomId!, completionHandler: {
+                response in
+                
+                for message in response.result.data!{
+                    print("\(message.personEmail!.toString()): \(message.text!)")
+                }
+                
+            })
             
-        })
+        } else {
+            
+            print("Send a message before receiving")
+        }
         
     }
+    
+    @IBAction func createRoom(_ sender: Any) {
+        
+        
+        sparkSDK!.rooms.create(title: "Assistenza") { (response) in
+            
+            
+            self.sparkSDK!.memberships.create(roomId: response.result.data!.id!, personEmail: EmailAddress.fromString("simon_pen@hotmail.it")!, completionHandler: { (response) in
+                
+                print(response.result.data!.roomId!)
+                
+            })
+        }
+        
+        
+    }
+    
     
     /*
     // MARK: - Navigation
