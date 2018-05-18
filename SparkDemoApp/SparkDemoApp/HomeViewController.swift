@@ -52,7 +52,10 @@ class HomeViewController: UIViewController {
                 print("Error: \(error)")
             }
         }
-        
+    }
+    
+    
+    @IBAction func receiveMessage(_ sender: Any) {
         
         sparkSDK!.messages.list(roomId: "Y2lzY29zcGFyazovL3VzL1JPT00vMDkyMjMyY2UtODZiOC0zMTg5LTgyNjEtOTYxMjQ0MThmYTll", completionHandler: {
             response in
@@ -60,12 +63,11 @@ class HomeViewController: UIViewController {
             for message in response.result.data!{
                 print("\(message.personEmail!.toString()): \(message.text!)")
             }
-        
             
-            })
+        })
+        
     }
     
-
     /*
     // MARK: - Navigation
 

@@ -59,6 +59,14 @@
                                     <action selector="sendMessage:" destination="sUp-NY-jwW" eventType="touchUpInside" id="xEO-mz-TWK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIm-Ec-qoL">
+                                <rect key="frame" x="79" y="455" width="218" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Receive messages from Simone"/>
+                                <connections>
+                                    <action selector="receiveMessage:" destination="sUp-NY-jwW" eventType="touchUpInside" id="3pE-hg-dSk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZHy-GZ-N3X"/>
