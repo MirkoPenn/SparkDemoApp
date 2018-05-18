@@ -41,6 +41,30 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func sendMessage(_ sender: Any) {
+        sparkSDK!.messages.post(personEmail: EmailAddress.fromString("simon_pen@hotmail.it")!, text: "tattaaaaaaaa") { response in
+            switch response.result {
+            case .success(let message):
+                print("Sent! Message: \(message)")
+            // ...
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
+        
+        
+        sparkSDK!.messages.list(roomId: "Y2lzY29zcGFyazovL3VzL1JPT00vMDkyMjMyY2UtODZiOC0zMTg5LTgyNjEtOTYxMjQ0MThmYTll", completionHandler: {
+            response in
+            
+            for message in response.result.data!{
+                print("\(message.personEmail!.toString()): \(message.text!)")
+            }
+        
+            
+            })
+    }
+    
 
     /*
     // MARK: - Navigation
