@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		AC401C8F20AEE2B200D03B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC401C8E20AEE2B200D03B8B /* AppDelegate.swift */; };
-		AC401C9120AEE2B200D03B8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC401C9020AEE2B200D03B8B /* ViewController.swift */; };
 		AC401C9420AEE2B200D03B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC401C9220AEE2B200D03B8B /* Main.storyboard */; };
 		AC401C9620AEE2B400D03B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC401C9520AEE2B400D03B8B /* Assets.xcassets */; };
 		AC401C9920AEE2B400D03B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC401C9720AEE2B400D03B8B /* LaunchScreen.storyboard */; };
 		AC401CA420AEE2B400D03B8B /* SparkDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC401CA320AEE2B400D03B8B /* SparkDemoAppTests.swift */; };
 		AC401CAF20AEE2B400D03B8B /* SparkDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC401CAE20AEE2B400D03B8B /* SparkDemoAppUITests.swift */; };
+		AC401CBD20AEEA4600D03B8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC401CBC20AEEA4600D03B8B /* LoginViewController.swift */; };
 		CB936C53F0D6BAD6D74E4344 /* Pods_SparkDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518042E03E4F66999021600D /* Pods_SparkDemoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,6 @@
 		518042E03E4F66999021600D /* Pods_SparkDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC401C8B20AEE2B200D03B8B /* SparkDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC401C8E20AEE2B200D03B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC401C9020AEE2B200D03B8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC401C9320AEE2B200D03B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC401C9520AEE2B400D03B8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC401C9820AEE2B400D03B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		AC401CAA20AEE2B400D03B8B /* SparkDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC401CAE20AEE2B400D03B8B /* SparkDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkDemoAppUITests.swift; sourceTree = "<group>"; };
 		AC401CB020AEE2B400D03B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC401CBC20AEEA4600D03B8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA0564B2703DB94E6C4520AB /* Pods-SparkDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SparkDemoApp/Pods-SparkDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,11 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				AC401C8E20AEE2B200D03B8B /* AppDelegate.swift */,
-				AC401C9020AEE2B200D03B8B /* ViewController.swift */,
 				AC401C9220AEE2B200D03B8B /* Main.storyboard */,
 				AC401C9520AEE2B400D03B8B /* Assets.xcassets */,
 				AC401C9720AEE2B400D03B8B /* LaunchScreen.storyboard */,
 				AC401C9A20AEE2B400D03B8B /* Info.plist */,
+				AC401CBC20AEEA4600D03B8B /* LoginViewController.swift */,
 			);
 			path = SparkDemoApp;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC401C9120AEE2B200D03B8B /* ViewController.swift in Sources */,
+				AC401CBD20AEEA4600D03B8B /* LoginViewController.swift in Sources */,
 				AC401C8F20AEE2B200D03B8B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
