@@ -14,6 +14,7 @@
 		AC401C9920AEE2B400D03B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC401C9720AEE2B400D03B8B /* LaunchScreen.storyboard */; };
 		AC401CA420AEE2B400D03B8B /* SparkDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC401CA320AEE2B400D03B8B /* SparkDemoAppTests.swift */; };
 		AC401CAF20AEE2B400D03B8B /* SparkDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC401CAE20AEE2B400D03B8B /* SparkDemoAppUITests.swift */; };
+		CB936C53F0D6BAD6D74E4344 /* Pods_SparkDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518042E03E4F66999021600D /* Pods_SparkDemoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		459846A64390F08320C63300 /* Pods-SparkDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SparkDemoApp/Pods-SparkDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		518042E03E4F66999021600D /* Pods_SparkDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC401C8B20AEE2B200D03B8B /* SparkDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC401C8E20AEE2B200D03B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC401C9020AEE2B200D03B8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		AC401CAA20AEE2B400D03B8B /* SparkDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC401CAE20AEE2B400D03B8B /* SparkDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkDemoAppUITests.swift; sourceTree = "<group>"; };
 		AC401CB020AEE2B400D03B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA0564B2703DB94E6C4520AB /* Pods-SparkDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SparkDemoApp/Pods-SparkDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB936C53F0D6BAD6D74E4344 /* Pods_SparkDemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17659824E19D2ADDDAD571EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA0564B2703DB94E6C4520AB /* Pods-SparkDemoApp.debug.xcconfig */,
+				459846A64390F08320C63300 /* Pods-SparkDemoApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8191A76415DEC6C5CD5C8D7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				518042E03E4F66999021600D /* Pods_SparkDemoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC401C8220AEE2B200D03B8B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				AC401CA220AEE2B400D03B8B /* SparkDemoAppTests */,
 				AC401CAD20AEE2B400D03B8B /* SparkDemoAppUITests */,
 				AC401C8C20AEE2B200D03B8B /* Products */,
+				17659824E19D2ADDDAD571EE /* Pods */,
+				8191A76415DEC6C5CD5C8D7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC401CB320AEE2B400D03B8B /* Build configuration list for PBXNativeTarget "SparkDemoApp" */;
 			buildPhases = (
+				AE728EADA575A187566772B7 /* [CP] Check Pods Manifest.lock */,
 				AC401C8720AEE2B200D03B8B /* Sources */,
 				AC401C8820AEE2B200D03B8B /* Frameworks */,
 				AC401C8920AEE2B200D03B8B /* Resources */,
+				D01CD8DC3427FAA68292E5F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +276,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AE728EADA575A187566772B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SparkDemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D01CD8DC3427FAA68292E5F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SparkDemoApp/Pods-SparkDemoApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${PODS_ROOT}/SparkSDK/MediaEngine/Wme.framework",
+				"${BUILT_PRODUCTS_DIR}/SparkSDK/SparkSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Wme.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SparkSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SparkDemoApp/Pods-SparkDemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC401C8720AEE2B200D03B8B /* Sources */ = {
@@ -428,6 +507,7 @@
 		};
 		AC401CB420AEE2B400D03B8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA0564B2703DB94E6C4520AB /* Pods-SparkDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +526,7 @@
 		};
 		AC401CB520AEE2B400D03B8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459846A64390F08320C63300 /* Pods-SparkDemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
