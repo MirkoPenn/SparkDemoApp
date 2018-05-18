@@ -31,13 +31,21 @@ class LoginViewController: UIViewController {
         let authenticator = OAuthAuthenticator(clientId: clientId, clientSecret: clientSecret, scope: scope, redirectUri: redirectUri)
         let spark = Spark(authenticator: authenticator)
         
-        print(spark.authenticator.authorized)
+        print("authorizing")
         
-        if !authenticator.authorized {
-            authenticator.authorize(parentViewController: self) { success in
-                if !success {
-                    print("User not authorized")
-                }
+        authenticator.authorize(parentViewController: self) { success in
+                
+            if !success {
+                    
+                print("User not authorized")
+                    
+            } else {
+                    
+                print("User authorized.")
+                    
+                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "homeViewController") as! HomeViewController
+                homeViewController.sparkSDK = spark
+                self.navigationController?.pushViewController(homeViewController, animated: true)
             }
         }
     }
